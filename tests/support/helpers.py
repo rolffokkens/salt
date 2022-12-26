@@ -1601,9 +1601,9 @@ class VirtualEnv:
     venv_dir = attr.ib(converter=_cast_to_pathlib_path)
     env = attr.ib(default=None)
     system_site_packages = attr.ib(default=False)
-    pip_requirement = attr.ib(default="pip>=22.3.1,<23.0", repr=False)
+    pip_requirement = attr.ib(default="pip>=20.2.4,<21.2", repr=False)
     setuptools_requirement = attr.ib(
-        default="setuptools!=50.*,!=51.*,!=52.*,<66", repr=False
+        default="setuptools!=50.*,!=51.*,!=52.*", repr=False
     )
     # TBD build_requirement = attr.ib(default="build!=0.6.*", repr=False)   # add build when implement pyproject.toml
     environ = attr.ib(init=False, repr=False)
